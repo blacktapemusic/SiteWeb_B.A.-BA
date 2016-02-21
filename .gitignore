@@ -3,3 +3,4 @@
 /b-a-ba/webApp/app/*/*.js
 /b-a-ba/webApp/app/*/*.js.map
 /b-a-ba/webApp/node_modules/
+/b-a-ba/webApp/typings/

@@ -3,14 +3,14 @@ import {RouteParams, Router} from 'angular2/router';
 
 
 @Component({
-    selector: "Article",
+    selector: "Evenement",
     template: `
-            ArticleComponent
+            EvenementComponent
             `
 
 })
 
-export class ArticleComponent implements OnInit {
+export class EvenementComponent implements OnInit {
   constructor(
       private _router: Router,
       private _routeParams: RouteParams /*,

@@ -3,7 +3,11 @@
 <html>
 
 <head>
-  <title>Angular 2 QuickStart</title>
+  <base href="/">
+
+  <title>B.A.-BA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Bootstrap -->
   <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Bootstrap Material Design -->
@@ -25,6 +29,10 @@
   <script src="node_modules/rxjs/bundles/Rx.js"></script>
   <script src="node_modules/angular2/bundles/angular2.dev.js"></script>
 
+  <!-- Router -->
+  <script src="node_modules/angular2/bundles/router.dev.js"></script>
+
+
   <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
   <script src="node_modules/jquery/dist/jquery.js"></script>
   <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
@@ -35,23 +43,25 @@
 
 
 
-  <!-- 2. Configure SystemJS
+  <!-- 2. Configure SystemJS-->
   <script>
-  System.config({
-    packages: {
-      app: {
-        format: 'register',
-        defaultExtension: 'js'
-      }
-    }
-  });
-  System.import('app/boot');
+        System.config({
+          packages: {
+            app: {
+              format: 'register',
+              defaultExtension: 'js'
+            }
+          }
+        });
+        System.import('app/main')
+              .then(null, console.error.bind(console));
+  </script>
 
-  </script>
-  -->
+<!--
   <script>
-    System.import('app/app.component.ts');
+    System.import('app/app.component.js');
   </script>
+-->
 </head>
 
 <!-- 3. Display the application -->
@@ -72,9 +82,9 @@ Panel content
 <div class="panel-footer">Panel footer</div>
 </div>
 -->
-<!--
+
 <my-app>Loading...</my-app>
--->
+
 
 <!--
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -92,7 +102,7 @@ data-target="#bs-example-navbar-collapse-1">
 
 </button>
 <a class="navbar-brand" href="#">
-<img src="http://placehold.it/150x50&text=Logo" alt="">
+<  src="http://placehold.it/150x50&text=Logo" alt="">
 </a>
 </div>
 
@@ -108,57 +118,6 @@ data-target="#bs-example-navbar-collapse-1">
 </nav>
 -->
 
-
-<nav class="navbar navbar-default" style="margin-bottom:0px">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">WebSiteName</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Page 1</a></li>
-      <li><a href="#">Page 2</a></li>
-      <li><a href="#">Page 3</a></li>
-    </ul>
-  </div>
-</nav>
-
-<!--
-<div class="container-fluid">
-<div class="row">
-<img src="resources/images/OTM.jpg" class="img-responsive">
-</div>
-</div>
--->
-
-<div class="container">
-
-  <!--
-  <div class="row">
-  <div class="center-block">row center-block</div>
-</div>
-<div class="row">
-<div class="col-md-6 brd">
-<div class="center-block">1 center-block</div>
-</div>
-<div class="col-md-6 brd">
-<div class="center-block">2 center-block</div>
-</div>
-</div>
--->
-
-<div class="row center-block">
-  <img src="resources/images/OTM.jpg" class="img-responsive">
-
-  <div class="jumbotron">
-    <h1>Jumbotron</h1>
-
-    <p>This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-
-    <p><a class="btn btn-primary btn-lg">Learn more</a></p>
-  </div>
-</div>
-</div>
 
 </body>
 
